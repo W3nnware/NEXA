@@ -1,0 +1,49 @@
+@use "/src/scss/base/variables" as *;
+
+
+* {
+    box-sizing: border-box;
+    // outline: 1px solid red;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: $background;
+    margin: 0;
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+button {
+
+    font: inherit;
+
+}

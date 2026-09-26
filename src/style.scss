@@ -1,0 +1,13 @@
+// BASE
+
+@use "/src/scss/base/variables";
+@use "/src/scss/base/mixins";
+@use "/src/scss/base/container";
+@use "/src/scss/base/global";
+@use "/src/scss/base/typography";
+@use "/src/scss/base/fonts";
+
+//  COMPONENTS 
+@use "/src/scss/components/buttons";
+@use "/src/scss/components/icons";
+@use "/src/scss/components/swiper";

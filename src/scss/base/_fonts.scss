@@ -1,0 +1,23 @@
+@use "/src/scss/base/variables" as *;
+
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url("../../fonts/Poppins/PoppinsRegular/PoppinsRegular.eot");
+    src: url("../../fonts/Poppins/PoppinsRegular/PoppinsRegular.eot?#iefix")format("embedded-opentype"),
+        url("../../fonts/Poppins/PoppinsRegular/PoppinsRegular.woff") format("woff"),
+        url("../../fonts/Poppins/PoppinsRegular/PoppinsRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "InterRegular";
+    src: url("../../fonts/Inter/InterRegular/InterRegular.eot");
+    src: url("../../fonts/Inter/InterRegular/InterRegular.eot?#iefix")format("embedded-opentype"),
+        url("../../fonts/Inter/InterRegular/InterRegular.woff") format("woff"),
+        url("../../fonts/Inter/InterRegular/InterRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}

@@ -1,0 +1,8 @@
+@use "/src/scss/base/variables" as *;
+
+@mixin button {
+    display: inline-block;
+    border: 1px solid $black;
+    text-align: center;
+    transition: $transition;
+}
