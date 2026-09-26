@@ -2,6 +2,7 @@
 @use "/src/scss/base/mixins" as *;
 
 .button {
+    display: inline-block;
     color: white;
     background-color: transparent;
     border-color: white;
@@ -25,6 +26,7 @@
 }
 
 .button-bg {
+    display: inline-block;
     color: black;
     background-color: white;
     border-color: white;
