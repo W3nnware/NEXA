@@ -5,10 +5,8 @@ import { Flip } from "gsap/Flip";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
-
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -30,7 +28,6 @@ scene.addEventListener('mousemove', (e) => {
     const rect = scene.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
-
     layers.forEach((layer) => {
         const speed = Number(layer.dataset.speed);
 
@@ -71,10 +68,8 @@ let isScrolling = false;
 function goToSection(index) {
     if (index < 0 || index >= sections.length) return;
     if (isScrolling) return;
-
     isScrolling = true;
     currentSection = index;
-
     const section = sections[index];
 
     gsap.to(window, {
@@ -84,7 +79,6 @@ function goToSection(index) {
             autoKill: false,
         },
         ease: "power3.inOut",
-
         onComplete: () => {
             isScrolling = false;
         },
@@ -107,7 +101,6 @@ window.addEventListener(
 );
 
 const counters = document.querySelectorAll(".counter");
-
 counters.forEach((counter) => {
     const target = Number(counter.dataset.number);
 
@@ -121,13 +114,11 @@ counters.forEach((counter) => {
             snap: {
                 innerText: 1,
             },
-
             scrollTrigger: {
                 trigger: ".ratings",
                 start: "top center",
                 toggleActions: "play none none none",
             },
-
             onUpdate() {
                 counter.innerText = Math.floor(counter.innerText);
             },
