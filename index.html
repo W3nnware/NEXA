@@ -10,57 +10,59 @@
 
 <body>
   <section class="parallax relative min-h-screen w-full overflow-hidden">
-    <img src="/src/assets/hero/bg.png" alt="" class="absolute inset-0 h-full w-full object-cover" />
+    <img src="/src/assets/hero/bg.svg" alt="" class="absolute inset-0 h-full w-full object-cover" />
 
-    <img src="/src/assets/hero/1.png" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
+    <img src="/src/assets/hero/1.svg" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
       data-speed="1" />
 
-    <img src="/src/assets/hero/2.png" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
+    <img src="/src/assets/hero/2.svg" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
       data-speed="2" />
 
-    <img src="/src/assets/hero/3.png" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
+    <img src="/src/assets/hero/3.svg" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
       data-speed="3" />
 
-    <img src="/src/assets/hero/4.png" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
+    <img src="/src/assets/hero/4.svg" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
       data-speed="4" />
 
-    <img src="/src/assets/hero/5.png" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
+    <img src="/src/assets/hero/5.svg" alt="" class="parallax-layer absolute inset-0 h-full w-full object-cover"
       data-speed="5" />
 
     <main class="z-[100] relative">
-      <header data-aos="fade-up"
-        class=" flex justify-between py-[30px] container mx-auto px-4 sm:px-6 lg:px-8 items-center">
-        <a href="#" class="logo tracking-[10px] uppercase">Nexa</a>
-
-        <nav>
-          <ul class="flex gap-10 list-none">
-            <li><a href="#" class="link">Home</a></li>
-            <li><a href="#" class="link">About</a></li>
-            <li><a href="#" class="link">Services</a></li>
-            <li><a href="#" class="link">Contact</a></li>
-          </ul>
-        </nav>
-
-        <a href="#" class="button ">Get started <i class="icon-right"></i></a>
-      </header>
-
       <section data-aos="fade-up"
-        class="hero container relative mx-auto px-4 sm:px-6 lg:px-8  h-screen flex flex-col justify-center">
-        <p class="uppercase text-white tracking-[12px]">Digital solution</p>
-        <h1 class="text-white font-black !text-8xl !mb-[50px] !mt-[0]">Ideas that turn <br>into real products</h1>
-        <p class="text-white text-xl font-thin">We design and develop web experiences <br>that help brands grow,
-          engage their
-          audience
-          <br>and achive real results.
-        </p>
-        <nav class="flex mt-[30px] gap-[20px] items-center">
-          <a href="#" class="button-bg">Get started <i class="icon-right"></i></a>
-          <a href="#" class="link">Learn more</a>
-        </nav>
+        class="hero py-[30px] container relative mx-auto px-4 sm:px-6 lg:px-8  h-screen flex flex-col justify-between">
+
+        <header data-aos="fade-up" class=" flex justify-between  container mx-auto px-4 sm:px-6 lg:px-8 items-center">
+          <a href="#" class="logo tracking-[10px] uppercase">Nexa</a>
+
+          <nav>
+            <ul class="flex gap-10 list-none">
+              <li><a href="#" class="link">Home</a></li>
+              <li><a href="#" class="link">About</a></li>
+              <li><a href="#" class="link">Services</a></li>
+              <li><a href="#" class="link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <a href="#" class="button ">Get started <i class="icon-right"></i></a>
+        </header>
+
+        <div>
+          <p class="uppercase text-white tracking-[12px]">Digital solution</p>
+          <h1 class="text-white font-black !text-8xl !mb-[50px] !mt-[0]">Ideas that turn <br>into real products</h1>
+          <p class="text-white text-xl font-thin">We design and develop web experiences <br>that help brands grow,
+            engage their
+            audience
+            <br>and achive real results.
+          </p>
+          <nav class="flex mt-[30px] gap-[20px] items-center">
+            <a href="#" class="button-bg">Get started <i class="icon-right"></i></a>
+            <a href="#" class="link">Learn more</a>
+          </nav>
+        </div>
+        <div></div>
       </section>
 
-      <!-- попробовать добавить h-[100vh] -->
-      <section class="advantages mt-[120px]  container relative mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
+      <section class="advantages snap-section  container relative mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
         <div data-aos="fade-up" class="left">
           <p class="uppercase text-white tracking-[12px]">our advantages</p>
           <h2 class="text-white font-black !text-6xl !mb-[50px] !mt-[0]">Why choose Us</h2>
@@ -104,9 +106,8 @@
         </div>
       </section>
 
-      <!-- попробовать добавить h-[100vh] -->
       <section data-aos="zoom-in"
-        class="about container flex gap-[30px] justify-between relative mx-auto px-4 sm:px-6 lg:px-8 mt-[300px] ">
+        class="about snap-section container flex gap-[30px] justify-between relative mx-auto px-4 sm:px-6 lg:px-8 ">
         <div class="left">
           <p class="uppercase text-white tracking-[12px]">about us</p>
           <h2 class="text-white font-black !text-6xl !mb-[50px] !mt-[0]">We build digital experiences</h2>
@@ -131,36 +132,51 @@
       </section>
 
       <section
-        class="ratings text-white mt-[120px]  container relative mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
+        class="ratings snap-section text-white container relative mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
         <div data-aos="zoom-in" class="text-start ">
-          <p class="font-bold text-4xl">250+</p>
-          <p class="text-gray-300">Projects Completed</p>
+
+          <div class="flex text-6xl">
+            <p class="font-bold text-6xl counter" data-number="250">0</p> <span>+</span>
+          </div>
+          <p class="text-gray-300 text-2xl">Projects Completed</p>
         </div>
 
         <span data-aos="zoom-in" class="divider"></span>
 
         <div data-aos="zoom-in" class="text-start">
-          <p class="font-bold text-4xl">120+</p>
-          <p class="text-gray-300">Happy Clients</p>
+          <div class="flex text-6xl">
+            <p class="font-bold text-6xl counter" data-number="120">0</p>
+            <span>+</span>
+          </div>
+
+          <p class="text-gray-300 text-2xl">Happy Clients</p>
         </div>
 
         <span data-aos="zoom-in" class="divider"></span>
 
         <div data-aos="zoom-in" class="text-start">
-          <p class="font-bold text-4xl">5+</p>
-          <p class="text-gray-300">Year of Experience</p>
+          <div class="flex text-6xl">
+            <p class="font-bold text-6xl counter" data-number="5">0</p>
+            <span>+</span>
+          </div>
+
+          <p class="text-gray-300 text-2xl">Year of Experience</p>
         </div>
 
         <span data-aos="zoom-in" class="divider"></span>
 
         <div data-aos="zoom-in" class="text-start">
-          <p class="font-bold text-4xl">99%</p>
-          <p class="text-gray-300">Client Satisfacrion</p>
+          <div class="flex text-6xl">
+            <p class="font-bold text-6xl counter" data-number="99">0</p>
+            <span>%</span>
+
+          </div>
+          <p class="text-gray-300 text-2xl">Client Satisfacrion</p>
         </div>
       </section>
 
-      <div data-aos="fade-up" class="connection container relative mx-auto px-4 sm:px-6 lg:px-8 text-white flex
-      flex-col items-center">
+      <div data-aos="fade-up" class="connection snap-section container relative mx-auto px-4 sm:px-6 lg:px-8 text-white flex
+      flex-col items-center justify-center">
         <h2 class="text-white text-center  font-black !text-6xl !mb-[50px] !mt-[120px]">Lets crate something
           great
           <br>together
@@ -169,33 +185,34 @@
           happen</p>
         <a href="#" class="button-bg w-[200px] mb-[120px] text-center mt-[30px]">Get started <i
             class="icon-right"></i></a>
+
+        <footer class="container mx-auto px-4 sm:px-6 lg:px-8 ">
+          <span class="divider-h"></span>
+          <div>
+            <div data-aos="fade-up"
+              class=" flex justify-between py-[30px] container mx-auto px-4 sm:px-6 lg:px-8 items-center">
+              <a href="#" class="logo tracking-[10px] uppercase">Nexa</a>
+
+              <nav>
+                <ul class="flex gap-10 list-none">
+                  <li><a href="#" class="link">Home</a></li>
+                  <li><a href="#" class="link">About</a></li>
+                  <li><a href="#" class="link">Services</a></li>
+                  <li><a href="#" class="link">Contact</a></li>
+                </ul>
+              </nav>
+
+              <ul class="flex text-white gap-[10px]">
+                <li><a href="#" class="icon-mail"></a></li>
+                <li><a href="#" class="icon-linkedin"></a></li>
+                <li><a href="#" class="icon-telegram"></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
 
-      <footer class="container mx-auto px-4 sm:px-6 lg:px-8 ">
-        <span class="divider-h"></span>
-        <div>
-          <header data-aos="fade-up"
-            class=" flex justify-between py-[30px] container mx-auto px-4 sm:px-6 lg:px-8 items-center">
-            <a href="#" class="logo tracking-[10px] uppercase">Nexa</a>
 
-            <nav>
-              <ul class="flex gap-10 list-none">
-                <li><a href="#" class="link">Home</a></li>
-                <li><a href="#" class="link">About</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">Contact</a></li>
-              </ul>
-            </nav>
-
-            <ul class="flex text-white gap-[10px]">
-              <li><a href="#" class="icon-mail"></a></li>
-              <li><a href="#" class="icon-linkedin"></a></li>
-              <li><a href="#" class="icon-telegram"></a></li>
-            </ul>
-          </header>
-        </div>
-
-      </footer>
 
 
     </main>

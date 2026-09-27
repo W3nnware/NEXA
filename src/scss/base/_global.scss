@@ -47,3 +47,16 @@ button {
     font: inherit;
 
 }
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    // display: flex;
+    align-items: center;
+}

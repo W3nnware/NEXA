@@ -9,6 +9,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
 
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.registerPlugin(Draggable, Flip, MotionPathHelper, MotionPathPlugin, ScrollTrigger, ScrollSmoother, SplitText);
 
 
@@ -50,4 +53,84 @@ scene.addEventListener('mouseleave', () => {
             ease: 'power3.out',
         });
     });
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+const sections = [
+    document.querySelector(".hero"),
+    document.querySelector(".advantages"),
+    document.querySelector(".about"),
+    document.querySelector(".ratings"),
+    document.querySelector(".connection"),
+].filter(Boolean);
+
+let currentSection = 0;
+let isScrolling = false;
+
+function goToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+    if (isScrolling) return;
+
+    isScrolling = true;
+    currentSection = index;
+
+    const section = sections[index];
+
+    gsap.to(window, {
+        duration: 0.1,
+        scrollTo: {
+            y: section,
+            autoKill: false,
+        },
+        ease: "power3.inOut",
+
+        onComplete: () => {
+            isScrolling = false;
+        },
+    });
+}
+
+window.addEventListener(
+    "wheel",
+    (event) => {
+        if (Math.abs(event.deltaY) < 1) return;
+        event.preventDefault();
+        if (isScrolling) return;
+        if (event.deltaY > 0) {
+            goToSection(currentSection + 1);
+        } else {
+            goToSection(currentSection - 1);
+        }
+    },
+    { passive: false }
+);
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+    const target = Number(counter.dataset.number);
+
+    gsap.fromTo(
+        counter,
+        { innerText: 0 },
+        {
+            innerText: target,
+            duration: 1.5,
+            ease: "power2.out",
+            snap: {
+                innerText: 1,
+            },
+
+            scrollTrigger: {
+                trigger: ".ratings",
+                start: "top center",
+                toggleActions: "play none none none",
+            },
+
+            onUpdate() {
+                counter.innerText = Math.floor(counter.innerText);
+            },
+        }
+    );
 });
